@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="sizes.css">
+    <link rel="stylesheet" href="form.css">
+
+</head>
+<body>
+    <div class="left">
+        <div class="name">
+            <h1>
+                The odin project
+            </h1>
+        </div>
+    </div>
+    <div class="right">
+        <p>
+            You may think that this a real online service! <em>But it is not!</em> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi!
+        </p>
+        <form action="#" name='formform'>
+            <div class="inputs">
+                <div class="names ibputsDivs">
+                    <div class="div_labelInput">
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Lorena">
+                        <div id="first_name_error" class="error"></div>                     
+                    </div>
+                    
+                    <div class="div_labelInput">
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Grigoraki">
+                        <div id="second_name_error" class="error"></div>
+                    </div>                    
+                </div>
+
+                <div class="contacts ibputsDivs">
+                    <div class="div_labelInput">
+                        <label for="e_mail">e-mail</label>
+                        <input type="email" id="e_mail" name="e_mail" required placeholder="lorena@gmail.com">
+                        <div id="email_error" class="error"></div>
+                    </div>
+                    
+                    <div class="div_labelInput">
+                        <label for="tel_number">Phone number</label>
+                        <input type="tel" id="tel_number" name="tel_number" pattern="[8][9][0-9]{9}"
+                        required placeholder="89123456789">
+                        <div id="tel_number_error" class="error"></div>
+                    </div>                    
+                </div>
+
+                <div class="passwords ibputsDivs">
+                    <div class="div_labelInput">
+                        <label for="user_password">Password</label>
+                        <input type="password" id="user_password" name="user_password" onkeyup="check(); return false" placeholder="Input password" minlength="6">
+                        <div id="user_password_error" class="error"></div>
+                    </div>
+                    
+                    <div class="div_labelInput">
+                        <label for="user_password_conf" >Confirm Password</label>
+                        <input type="password" id="user_password_conf" name="user_password_conf" onkeyup="check(); return false" placeholder="Confirm password">
+                        <div id="confirm_password_error" class="error"></div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <input type="submit" value="submit"> 
+        </form> 
+        <p class="end">Already have an account? <a href="#">Log in</a></p>       
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
